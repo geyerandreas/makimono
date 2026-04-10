@@ -1,0 +1,16 @@
+[package]
+name = "makimono"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+homepage.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+env_logger = "0.11.9"
+log = "0.4.29"
+regex = "1.12.3"
+
+[dev-dependencies]
+indoc = "2.0.7"

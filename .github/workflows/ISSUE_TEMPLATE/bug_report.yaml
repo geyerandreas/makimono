@@ -1,0 +1,27 @@
+name: Bug report
+description: Create a report to help us improve makimono.
+labels: bug
+body:
+  - type: textarea
+    attributes:
+      label: Summary
+      description: |
+        A clear and concise description of the bug, including a minimal reproducible example.
+        If we cannot reproduce the bug, it is unlikely that we will be able to help you.
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: Willing to submit a PR?
+      description: |
+        If you have time, we welcome pull requests.
+      options:
+        - label: Yes — I’m willing to open a PR to fix this.
+
+  - type: input
+    attributes:
+      label: Version
+      description: What version of makimono are you using?
+    validations:
+      required: true

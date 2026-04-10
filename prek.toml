@@ -1,0 +1,22 @@
+[[repos]]
+repo = "https://github.com/pre-commit/pre-commit-hooks"
+rev = "v6.0.0"
+hooks = [
+  { id = "check-yaml" },
+  { id = "check-toml" },
+  { id = "end-of-file-fixer" },
+  { id = "trailing-whitespace" },
+  { id = "check-added-large-files" },
+  { id = "check-merge-conflict" },
+  { id = "fix-byte-order-marker" },
+  { id = "mixed-line-ending" },
+  { id = "no-commit-to-branch" },
+  { id = "check-executables-have-shebangs" },
+]
+
+[[repos]]
+repo = "https://github.com/crate-ci/typos"
+rev = "v1.45.0"
+hooks = [
+  { id = "typos" },
+]
