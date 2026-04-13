@@ -188,7 +188,7 @@ pub fn generate_content(
 
 #[cfg(test)]
 mod tests {
-    use crate::{config::Settings, generate_content};
+    use crate::{Settings, generate_content};
 
     #[test]
     fn test_before_release() -> Result<(), Box<dyn std::error::Error>> {
