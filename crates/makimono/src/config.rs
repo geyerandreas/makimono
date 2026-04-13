@@ -23,7 +23,7 @@ pub struct NewSettings {
     pub start_header: String,
     /// Prefix used for subsection headings inside the unreleased section.
     pub label_header_prefix: String,
-    /// Ordered mapping of known labels to their rendered subsection headers.
+    /// Ordered list of known labels and their rendered subsection headers.
     pub labels: Vec<Section>,
     /// Regex used to detect where the current unreleased section ends.
     pub end_regex: String,
