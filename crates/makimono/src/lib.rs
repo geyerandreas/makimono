@@ -1,8 +1,8 @@
 mod config;
 
-use std::collections::HashMap;
-
+pub use config::{Section, Settings};
 use regex::Regex;
+use std::collections::HashMap;
 
 /// Parsed content for a single label section in the unreleased changelog area.
 #[derive(Debug, Clone)]
@@ -28,7 +28,7 @@ pub struct SectionContent {
 /// header cannot be found in `content`.
 pub fn generate_content(
     content: &str,
-    settings: &config::NewSettings,
+    settings: &Settings,
     message: String,
     labels: &[String],
 ) -> Result<String, Box<dyn std::error::Error>> {
@@ -188,7 +188,7 @@ pub fn generate_content(
 
 #[cfg(test)]
 mod tests {
-    use crate::{config::NewSettings, generate_content};
+    use crate::{Settings, generate_content};
 
     #[test]
     fn test_before_release() -> Result<(), Box<dyn std::error::Error>> {
@@ -200,7 +200,7 @@ mod tests {
             * Old entry
         "#};
 
-        let settings = NewSettings::default();
+        let settings = Settings::default();
 
         let result = generate_content(
             content,
@@ -229,7 +229,7 @@ mod tests {
     fn test_first_entry() -> Result<(), Box<dyn std::error::Error>> {
         let content = indoc::indoc! {"### Latest Changes\n"};
 
-        let settings = NewSettings::default();
+        let settings = Settings::default();
 
         let result = generate_content(
             content,
@@ -250,7 +250,7 @@ mod tests {
     fn test_second_entry() -> Result<(), Box<dyn std::error::Error>> {
         let content = indoc::indoc! {"### Latest Changes\n\n* Some previous change\n"};
 
-        let settings = NewSettings::default();
+        let settings = Settings::default();
 
         let result = generate_content(
             content,
@@ -277,7 +277,7 @@ mod tests {
             * Existing feature.
         "#};
 
-        let settings = NewSettings::default();
+        let settings = Settings::default();
 
         let result = generate_content(content, &settings, String::from("* New PR Feature"), &[])?;
 
@@ -307,7 +307,7 @@ mod tests {
             * Existing feature.
         "#};
 
-        let settings = NewSettings::default();
+        let settings = Settings::default();
 
         let result = generate_content(
             content,
@@ -345,7 +345,7 @@ mod tests {
             * Existing refactor.
         "#};
 
-        let settings = NewSettings::default();
+        let settings = Settings::default();
 
         let result = generate_content(
             content,
@@ -385,7 +385,7 @@ mod tests {
             * Existing feature.
         "#};
 
-        let settings = NewSettings::default();
+        let settings = Settings::default();
 
         let result = generate_content(
             content,
@@ -425,7 +425,7 @@ mod tests {
             * Existing refactor.
         "#};
 
-        let settings = NewSettings::default();
+        let settings = Settings::default();
 
         let result = generate_content(
             content,
@@ -467,7 +467,7 @@ mod tests {
             * Old release content.
         "#};
 
-        let settings = NewSettings::default();
+        let settings = Settings::default();
 
         let result = generate_content(
             content,
@@ -505,7 +505,7 @@ mod tests {
             * Old release content.
         "#};
 
-        let settings = NewSettings::default();
+        let settings = Settings::default();
 
         let result = generate_content(
             content,
@@ -542,7 +542,7 @@ mod tests {
             * Existing refactor.
         "#};
 
-        let settings = NewSettings::default();
+        let settings = Settings::default();
 
         let result = generate_content(
             content,
@@ -583,7 +583,7 @@ mod tests {
             * Existing refactor.
         "#};
 
-        let settings = NewSettings::default();
+        let settings = Settings::default();
 
         let result = generate_content(content, &settings, String::from("* Untagged item."), &[])?;
 
