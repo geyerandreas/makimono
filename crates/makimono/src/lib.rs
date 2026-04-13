@@ -13,7 +13,8 @@ pub struct SectionContent {
     pub header: String,
     /// Raw markdown items contained in this section.
     pub content: String,
-    /// Byte offset in the source release block, used to keep original order.
+    /// Byte offset within the trimmed `release_content` used during parsing,
+    /// used to keep the original section order.
     pub index: usize,
 }
 
