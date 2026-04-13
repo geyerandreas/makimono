@@ -4,14 +4,28 @@ use std::collections::HashMap;
 
 use regex::Regex;
 
+/// Parsed content for a single label section in the unreleased changelog area.
 #[derive(Debug, Clone)]
 pub struct SectionContent {
+    /// Label key associated with this section (for example `feature`).
     pub label: String,
+    /// Human-readable section header rendered in markdown.
     pub header: String,
+    /// Raw markdown items contained in this section.
     pub content: String,
+    /// Byte offset within the trimmed `release_content` used during parsing,
+    /// used to keep the original section order.
     pub index: usize,
 }
 
+/// Inserts a new changelog `message` into the unreleased section.
+///
+/// The function looks for `settings.start_header`, parses known label sections,
+/// prepends the new message to the first matching label in `labels`, and rebuilds
+/// the unreleased block while preserving the rest of the file.
+///
+/// Returns an error when required regexes cannot be compiled or when the start
+/// header cannot be found in `content`.
 pub fn generate_content(
     content: &str,
     settings: &config::NewSettings,
