@@ -1,8 +1,8 @@
 mod config;
 
-use std::collections::HashMap;
-
+pub use config::Settings;
 use regex::Regex;
+use std::collections::HashMap;
 
 /// Parsed content for a single label section in the unreleased changelog area.
 #[derive(Debug, Clone)]
@@ -28,7 +28,7 @@ pub struct SectionContent {
 /// header cannot be found in `content`.
 pub fn generate_content(
     content: &str,
-    settings: &config::Settings,
+    settings: &Settings,
     message: String,
     labels: &[String],
 ) -> Result<String, Box<dyn std::error::Error>> {
