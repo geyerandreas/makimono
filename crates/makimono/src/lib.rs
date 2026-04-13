@@ -1,6 +1,6 @@
 mod config;
 
-pub use config::Settings;
+pub use config::{Section, Settings};
 use regex::Regex;
 use std::collections::HashMap;
 
