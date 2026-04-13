@@ -18,7 +18,7 @@ macro_rules! section {
 }
 
 /// Settings that control how new changelog entries are inserted into a markdown file.
-pub struct NewSettings {
+pub struct Settings {
     /// The header that marks the start of the editable unreleased section.
     pub start_header: String,
     /// Prefix used for subsection headings inside the unreleased section.
@@ -29,7 +29,7 @@ pub struct NewSettings {
     pub end_regex: String,
 }
 
-impl Default for NewSettings {
+impl Default for Settings {
     fn default() -> Self {
         Self {
             start_header: String::from("### Latest Changes"),
