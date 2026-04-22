@@ -43,6 +43,7 @@ jobs:
         with:
           node-version: 22
           cache: "pnpm"
+          cache-dependency-path: crates/makimono-node/pnpm-lock.yaml
 
       - name: Install
         uses: dtolnay/rust-toolchain@stable
@@ -93,6 +94,7 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+          cache-dependency-path: crates/makimono-node/pnpm-lock.yaml
       - name: Install
         uses: dtolnay/rust-toolchain@stable
         with:
