@@ -1,14 +1,14 @@
 [package]
 name = "makimono"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
 authors = ["geyerandreas <andreas@qbitone.de>"]
 description = "A tool for creating changelog content during development."
-edition.workspace = true
-homepage.workspace = true
-license.workspace = true
 readme.workspace = true
+homepage.workspace = true
 repository.workspace = true
-rust-version.workspace = true
-version.workspace = true
+license.workspace = true
 
 [dependencies]
 env_logger = "0.11.9"

@@ -1,0 +1,48 @@
+{
+  "name": "makimono-node",
+  "version": "0.1.0",
+  "description": "Node.js bindings for makimono",
+  "keywords": [
+    "changelog",
+    "markdown",
+    "napi",
+    "node-addon",
+    "rust"
+  ],
+  "homepage": "https://github.com/geyerandreas/makimono",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geyerandreas/makimono.git"
+  },
+  "bugs": {
+    "url": "https://github.com/geyerandreas/makimono/issues"
+  },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./index.js",
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "*.node"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "test": "pnpm run build:debug && node --test test/*.test.js",
+    "prepublishOnly": "pnpm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.18.0",
+  "devDependencies": {
+    "@napi-rs/cli": "^3.6.2"
+  }
+}
