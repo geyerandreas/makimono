@@ -1,0 +1,21 @@
+[package]
+name = "makimono-node"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors = ["geyerandreas <andreas@qbitone.de>"]
+description = "Node.js bindings for makimono"
+homepage.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+makimono = { path = "../makimono" }
+napi = { version = "3.8.5", default-features = false, features = ["napi4"] }
+napi-derive = "3.5.4"
+
+[build-dependencies]
+napi-build = "2.3.1"
