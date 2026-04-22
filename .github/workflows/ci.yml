@@ -35,6 +35,10 @@ jobs:
       - uses: actions/checkout@v6
       - name: setup pnpm
         uses: pnpm/action-setup@v6
+        with:
+          run_install: |
+            - cwd: crates/makimono-node
+
       - name: Setup node
         uses: actions/setup-node@v6
         with:
@@ -83,6 +87,9 @@ jobs:
       - uses: actions/checkout@v6
       - name: setup pnpm
         uses: pnpm/action-setup@v6
+        with:
+          run_install: |
+            - cwd: crates/makimono-node
       - name: Setup node
         uses: actions/setup-node@v6
         with:
