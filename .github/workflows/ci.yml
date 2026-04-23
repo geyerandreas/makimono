@@ -158,7 +158,8 @@ jobs:
       - name: Download all artifacts
         uses: actions/download-artifact@v8
         with:
-          path: artifacts
+          path: crates/makimono-node/artifacts
+
       - name: create npm dirs
         run: pnpm napi create-npm-dirs
         working-directory: crates/makimono-node
