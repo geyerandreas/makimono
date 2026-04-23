@@ -166,7 +166,7 @@ jobs:
       - name: create npm dirs
         run: |
           pnpm napi create-npm-dirs
-          ls -R crates/makimono-node/npm
+          ls -R npm
         shell: bash
         working-directory: crates/makimono-node
 
