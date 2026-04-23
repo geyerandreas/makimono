@@ -153,17 +153,22 @@ jobs:
           cache-dependency-path: crates/makimono-node/pnpm-lock.yaml
       - name: Install dependencies
         run: pnpm install
+        working-directory: crates/makimono-node
+
       - name: Download all artifacts
         uses: actions/download-artifact@v8
         with:
           path: artifacts
       - name: create npm dirs
         run: pnpm napi create-npm-dirs
+        working-directory: crates/makimono-node
       - name: Move artifacts
         run: pnpm napi artifacts
+        working-directory: crates/makimono-node
       - name: List packages
         run: ls -R ./npm
         shell: bash
+        working-directory: crates/makimono-node
       - name: Publish
         run: |
           npm config set provenance true
@@ -180,6 +185,7 @@ jobs:
           else
             echo "Not a release, skipping publish"
           fi
+        working-directory: crates/makimono-node
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
