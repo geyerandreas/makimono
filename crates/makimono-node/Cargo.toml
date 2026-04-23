@@ -8,6 +8,7 @@ description = "Node.js bindings for makimono"
 homepage.workspace = true
 repository.workspace = true
 license.workspace = true
+publish = false
 
 [lib]
 crate-type = ["cdylib"]
