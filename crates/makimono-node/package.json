@@ -41,6 +41,16 @@
   "engines": {
     "node": ">=20"
   },
+  "napi": {
+    "binaryName": "index",
+    "packageName": "@qbitone/makimono",
+    "targets": [
+      "x86_64-apple-darwin",
+      "aarch64-apple-darwin",
+      "x86_64-unknown-linux-gnu",
+      "aarch64-unknown-linux-gnu"
+    ]
+  },
   "packageManager": "pnpm@10.18.0",
   "devDependencies": {
     "@napi-rs/cli": "^3.6.2"

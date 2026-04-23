@@ -141,16 +141,19 @@ jobs:
       - build
     steps:
       - uses: actions/checkout@v6
+
       - name: setup pnpm
         uses: pnpm/action-setup@v6
         with:
           version: 10.18.0
+
       - name: Setup node
         uses: actions/setup-node@v6
         with:
           node-version: 22
           cache: pnpm
           cache-dependency-path: crates/makimono-node/pnpm-lock.yaml
+
       - name: Install dependencies
         run: pnpm install
         working-directory: crates/makimono-node
@@ -161,25 +164,31 @@ jobs:
           path: crates/makimono-node/artifacts
 
       - name: create npm dirs
-        run: pnpm napi create-npm-dirs
+        run: |
+          pnpm napi create-npm-dirs
+          ls -R crates/makimono-node/npm
+        shell: bash
         working-directory: crates/makimono-node
+
       - name: Move artifacts
         run: pnpm napi artifacts
         working-directory: crates/makimono-node
+
       - name: List packages
         run: ls -R ./npm
         shell: bash
         working-directory: crates/makimono-node
+
       - name: Publish
         run: |
           npm config set provenance true
 
           COMMIT_MESSAGE=$(git log -1 --pretty=%B)
-          if "$COMMIT_MESSAGE" | grep "^v\?[0-9]\+\.[0-9]\+\.[0-9]\+$";
+          if echo "$COMMIT_MESSAGE" | grep "^v\?[0-9]\+\.[0-9]\+\.[0-9]\+$";
           then
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
             npm publish --access public
-          elif "$COMMIT_MESSAGE" | grep "^v\?[0-9]\+\.[0-9]\+\.[0-9]\+";
+          elif echo "$COMMIT_MESSAGE" | grep "^v\?[0-9]\+\.[0-9]\+\.[0-9]\+";
           then
             echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
             npm publish --tag next --access public
