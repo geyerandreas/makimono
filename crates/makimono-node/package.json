@@ -9,6 +9,11 @@
     "node-addon",
     "rust"
   ],
+  "author": {
+    "name": "Andreas Geyer",
+    "email": "andreas@qbitone.de",
+    "url": "https://qbitone.de"
+  },
   "homepage": "https://github.com/geyerandreas/makimono",
   "repository": {
     "type": "git",
