@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Update Release Notes
-        uses: geyerandreas/makimono-action@0.1.2
+        uses: geyerandreas/makimono-action@0.1.3
