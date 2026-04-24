@@ -1,0 +1,19 @@
+name: Update Changelog
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  update-notes:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Update Release Notes
+        uses: geyerandreas/makimono-action@0.1.1
