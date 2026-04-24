@@ -7,6 +7,8 @@ makimono - Write your changes on the go
 
 </h1>
 
+</div>
+
 ## Changelog
 
 ### Latest Changes
