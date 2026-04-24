@@ -13,4 +13,5 @@ makimono - Write your changes on the go
 
 ### Latest Changes
 
+* chore: fix missing closing html tag in README.md. PR [#15](https://github.com/geyerandreas/makimono/pull/15) by [@geyerandreas](https://github.com/geyerandreas).
 * build(deps): update action geyerandreas/makimono-action to v0.1.3. PR [#14](https://github.com/geyerandreas/makimono/pull/14) by [@geyerandreas](https://github.com/geyerandreas).
