@@ -13,6 +13,7 @@ makimono - Write your changes on the go
 
 ### Latest Changes
 
+* build: add `dependabot.yml`. PR [#20](https://github.com/geyerandreas/makimono/pull/20) by [@geyerandreas](https://github.com/geyerandreas).
 * build: pin actions to commit SHA. PR [#19](https://github.com/geyerandreas/makimono/pull/19) by [@geyerandreas](https://github.com/geyerandreas).
 * build: pin action to commit SHA. PR [#18](https://github.com/geyerandreas/makimono/pull/18) by [@geyerandreas](https://github.com/geyerandreas).
 * build: add zizmor GitHub action. PR [#17](https://github.com/geyerandreas/makimono/pull/17) by [@geyerandreas](https://github.com/geyerandreas).
