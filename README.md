@@ -13,6 +13,7 @@ makimono - Write your changes on the go
 
 ### Latest Changes
 
+* chore(deps): bump actions/upload-pages-artifact from 4.0.0 to 5.0.0. PR [#21](https://github.com/geyerandreas/makimono/pull/21) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * build: add `dependabot.yml`. PR [#20](https://github.com/geyerandreas/makimono/pull/20) by [@geyerandreas](https://github.com/geyerandreas).
 * build: pin actions to commit SHA. PR [#19](https://github.com/geyerandreas/makimono/pull/19) by [@geyerandreas](https://github.com/geyerandreas).
 * build: pin action to commit SHA. PR [#18](https://github.com/geyerandreas/makimono/pull/18) by [@geyerandreas](https://github.com/geyerandreas).
