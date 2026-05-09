@@ -3,13 +3,11 @@ name = "pymakimono"
 "description" = "Python bindings for makimono"
 requires-python = ">=3.10"
 license = "MIT"
-license-files = ["LICENSE"]
 authors = [
   { name = "Andreas Geyer", email = "andreas@qbitone.de" },
 ]
-"keywords" = ["changelog", "markdown", "napi", "node-addon", "rust"]
+"keywords" = ["bindings", "changelog", "markdown", "pyo3", "python", "rust"]
 classifiers = [
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
