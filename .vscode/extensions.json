@@ -1,6 +1,17 @@
 {
   "recommendations": [
+    "astral-sh.ty",
+    "charliermarsh.ruff",
+    "editorconfig.editorconfig",
+    "ms-python.python",
+    "njpwerner.autodocstring",
     "rust-lang.rust-analyzer",
-    "tombi-toml.tombi",
+    "tombi-toml.tombi"
+  ],
+    "unwantedRecommendations": [
+    "matangover.mypy",
+    "ms-python.mypy-type-checker",
+    "ms-python.vscode-pylance",
+    "tamasfe.even-better-toml"
   ]
 }
