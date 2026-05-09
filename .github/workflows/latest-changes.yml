@@ -16,4 +16,9 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Update Release Notes
-        uses: geyerandreas/makimono-action@c3ae63949dc661395f85d88486bd6743b016be04 # v0
+        uses: geyerandreas/makimono-action@326374b2fabdb4bad2b0f449b1a6b259a48543a8 # v0.1.4
+        with:
+          release_notes_file: CHANGELOG.md
+          start_header: "## Latest Changes"
+          label_header_prefix: "### "
+          end_regex: (?m)(^## .*)|(^# .*)
