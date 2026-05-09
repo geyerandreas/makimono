@@ -1,0 +1,38 @@
+[project]
+name = "pymakimono"
+"description" = "Python bindings for makimono"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Andreas Geyer", email = "andreas@qbitone.de" },
+]
+"keywords" = ["changelog", "markdown", "napi", "node-addon", "rust"]
+classifiers = [
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Programming Language :: Rust",
+]
+dynamic = ["version"]
+
+[project.urls]
+changelog = "https://github.com/geyerandreas/makimono/blob/main/CHANGELOG.md"
+documentation = "https://geyerandreas.github.io/makimono/"
+repository = "https://github.com/geyerandreas/makimono"
+
+[dependency-groups]
+dev = [
+  "pytest==9.0.3",
+  "ruff==0.15.12",
+  "ty==0.0.34",
+]
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
