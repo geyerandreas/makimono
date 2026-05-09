@@ -10,7 +10,7 @@
 * build: pin action to commit SHA. PR [#18](https://github.com/geyerandreas/makimono/pull/18) by [@geyerandreas](https://github.com/geyerandreas).
 * build: add zizmor GitHub action. PR [#17](https://github.com/geyerandreas/makimono/pull/17) by [@geyerandreas](https://github.com/geyerandreas).
 
-###Features
+### Features
 
 * feat: add python bindings. PR [#24](https://github.com/geyerandreas/makimono/pull/24) by [@geyerandreas](https://github.com/geyerandreas).
 
