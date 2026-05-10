@@ -606,4 +606,25 @@ mod tests {
 
         Ok(())
     }
+
+    #[test]
+    fn test_first_entry_with_new_label() -> Result<(), Box<dyn std::error::Error>> {
+        let content = indoc::indoc! {"### Latest Changes\n"};
+
+        let settings = Settings::default();
+
+        let result = generate_content(
+            content,
+            &settings,
+            String::from("* New & first PR Feature"),
+            &[String::from("feature")],
+        )?;
+
+        assert_eq!(
+            result,
+            indoc::indoc! {"### Latest Changes\n\n#### Features\n\n* New & first PR Feature\n"}
+        );
+
+        Ok(())
+    }
 }

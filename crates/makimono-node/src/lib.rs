@@ -56,3 +56,46 @@ pub fn generate_content(
     makimono::generate_content(&content, &settings, message, &labels)
         .map_err(|err| Error::from_reason(err.to_string()))
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn generate_content_smoke_test() {
+        let result = generate_content(
+            "### Latest Changes\n".to_string(),
+            "* New & first PR Feature".to_string(),
+            vec![],
+            None,
+        );
+
+        assert_eq!(
+            result.unwrap(),
+            "### Latest Changes\n\n* New & first PR Feature\n"
+        );
+    }
+
+    #[test]
+    fn test_first_entry_with_new_label() {
+        let result = generate_content(
+            "### Latest Changes\n".to_string(),
+            "* New & first PR Feature".to_string(),
+            vec!["feature".to_string()],
+            Some(GenerateContentOptions {
+                start_header: None,
+                label_header_prefix: Some("#### ".to_string()),
+                labels: Some(vec![SectionOptions {
+                    label: "feature".to_string(),
+                    header: "Features".to_string(),
+                }]),
+                end_regex: None,
+            }),
+        );
+
+        assert_eq!(
+            result.unwrap(),
+            "### Latest Changes\n\n#### Features\n\n* New & first PR Feature\n"
+        );
+    }
+}

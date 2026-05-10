@@ -14,7 +14,7 @@
 
 * feat: add python bindings. PR [#24](https://github.com/geyerandreas/makimono/pull/24) by [@geyerandreas](https://github.com/geyerandreas).
 
-###Internal
+### Internal
 
 * chore: fix some minor issues. PR [#25](https://github.com/geyerandreas/makimono/pull/25) by [@geyerandreas](https://github.com/geyerandreas).
 
