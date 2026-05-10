@@ -18,6 +18,10 @@
 
 * chore: fix some minor issues. PR [#25](https://github.com/geyerandreas/makimono/pull/25) by [@geyerandreas](https://github.com/geyerandreas).
 
+###Internal
+
+* test: add new test cases. PR [#26](https://github.com/geyerandreas/makimono/pull/26) by [@geyerandreas](https://github.com/geyerandreas).
+
 ## 0.1.3
 
 * chore: add utility script for bumping version. PR [#16](https://github.com/geyerandreas/makimono/pull/16) by [@geyerandreas](https://github.com/geyerandreas).
