@@ -152,8 +152,10 @@ pub fn generate_content(
         .filter(|s| !s.content.is_empty())
         .map(|s| {
             format!(
-                "{}{}\n\n{}",
-                settings.label_header_prefix, s.header, s.content
+                "{} {}\n\n{}",
+                settings.label_header_prefix.trim_end(),
+                s.header,
+                s.content
             )
         })
         .collect();
