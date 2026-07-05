@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* chore(deps): bump zizmorcore/zizmor-action from 0.5.3 to 0.5.7. PR [#36](https://github.com/geyerandreas/makimono/pull/36) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * chore: update vscode recommendations. PR [#23](https://github.com/geyerandreas/makimono/pull/23) by [@geyerandreas](https://github.com/geyerandreas).
 * docs: move changes to own `CHANGELOG.md`. PR [#22](https://github.com/geyerandreas/makimono/pull/22) by [@geyerandreas](https://github.com/geyerandreas).
 * chore(deps): bump actions/upload-pages-artifact from 4.0.0 to 5.0.0. PR [#21](https://github.com/geyerandreas/makimono/pull/21) by [@dependabot[bot]](https://github.com/apps/dependabot).
