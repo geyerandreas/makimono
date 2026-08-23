@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* chore(deps): bump zizmorcore/zizmor-action from 0.5.7 to 0.6.0. PR [#38](https://github.com/geyerandreas/makimono/pull/38) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * chore(deps): bump actions/checkout from 6.0.2 to 7.0.0. PR [#35](https://github.com/geyerandreas/makimono/pull/35) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * chore(deps): bump zizmorcore/zizmor-action from 0.5.3 to 0.5.7. PR [#36](https://github.com/geyerandreas/makimono/pull/36) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * chore: update vscode recommendations. PR [#23](https://github.com/geyerandreas/makimono/pull/23) by [@geyerandreas](https://github.com/geyerandreas).
